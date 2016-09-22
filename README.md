@@ -12,7 +12,7 @@ This repository includes the softwares and models for the paper
 }
 ```
 
-<img src="./misc/memnet_dparser.pdf" width="600">
+<img src="./misc/memnet_dparser.jpg" width="600">
 
 ## Requirements
 - [Intel MKL](https://software.intel.com/en-us/intel-mkl) or [OpenBLAS](http://www.openblas.net/)
