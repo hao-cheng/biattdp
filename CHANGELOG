@@ -1,0 +1,49 @@
+#######################################
+#    MemNetDependencyParse v0.0.6     #
+#######################################
+
+Summary
+	attention vectors do not share parameters
+
+#######################################
+#    MemNetDependencyParse v0.0.5     #
+#######################################
+
+Summary
+	fixed bug for lemma_vocab
+	add bias for composition and projection
+
+#######################################
+#    MemNetDependencyParse v0.0.4     #
+#######################################
+
+Summary
+	support features for lemma, cpos, and misc (all fields in CoNLL-X format)
+	merge word+pos projection into a composition layer
+
+#######################################
+#    MemNetDependencyParse v0.0.3     #
+#######################################
+
+Summary
+	softmax stability: substract max before exp
+	bias should be InputMarjor, not OutputShared
+	enable bias to all output layer
+
+#######################################
+#    MemNetDependencyParse v0.0.2     #
+#######################################
+
+Summary
+	adapt tialnn-0.0.1 update from hcheng.
+		* gradients/adam.h: use 1e-8 instead of 1e-7
+		* unit/gated_recurrent_xunit.h: neuron as the template parameter
+		* unit/lstm_recurrent_xunit.h: add support on LSTM recurrent unit
+		* util/numeric.h: change leaky_relu_{f,g}, add leaky_tanh_{f,g}
+
+#######################################
+#    MemNetDependencyParse v0.0.1     #
+#######################################
+
+Summary
+	N/A
