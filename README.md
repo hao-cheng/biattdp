@@ -32,8 +32,8 @@ This repository includes the softwares and models for the paper
   * change (Line 9) ```CXX```
 2. ```cd make && make```
 3. The compiled binaries can be found in ```bin/```.
-  * ```run_?memnet_dparser.mkl```: this binary is used to parse a conllx file with a trained model.
-  * ```train_?memnet_dparser.mkl```: this binary is used to train a parser. 
+  * ```run_cmemnet_dparser.mkl```: this binary is used to parse a conllx file with a trained model.
+  * ```train_cmemnet_dparser.mkl```: this binary is used to train a parser. 
 
 - If you don't have Intel MKL, the software can also be linked to OpenBLAS libraries.
 	In this case, you need to change the make/memnet.mkl.mk.
