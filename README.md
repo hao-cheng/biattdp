@@ -61,19 +61,30 @@ Use -h to check the available options.
 
 #### Train
 To train the model, please refer to the example config file under examples/configs.
-./bin/train_cmement_dparser.mkl -c configs/train.config --outbase var/example
 
-You can also provide command line parameters. Note that command line parameters overwrite config file parameters.
+bin/train_cmement_dparser.mkl -c configs/ex001.train.config --outbase var/ex001
+
+You need to run the scripts under the folder ```examples```. 
+Otherwise, you need to edit the paths in the config file. 
+
+You can also provide command line parameters. Note that command line parameters
+overwrite config file parameters.
+
+We also provide the config file (ex002.train.config) we used to train the best PTB model we reported in the paper.
+Due to the license issue, please download the PTB data from LDC1999T42.
 
 #### Evaluate
-./bin/run_cmemnet_dparser.mkl --inmodel var/example.model --infile data/test.conllx --outfile var/example.out
+bin/run_cmemnet_dparser.mkl --mst --inmodel var/ex001.model --infile data/sampled_wsj.dev.conllx --outfile var/ex001.decode.raw
 
-Post-processing ...
-In order to enable mini-batch training, we group sentences according to their length.
+bin/format_decode_output.py data/sampled_wsj.dev.conllx var/ex001.decode.raw var/ex001.decode.conllx
+
+bin/eval.pl -g data/sampled_wsj.dev.conllx -s var/ex001.decode.conllx -q
+
+NOTE: In order to enable mini-batch training, we group sentences according to their length.
 Therefore, internally, the order of the training instances are not preserved.
 This is not an issue for training, but it affects evaluation of the parsing output.
-In order to align the reference and parsed output, we require the reference file is ordered by sentence length, use that file as the input to the run_cmemnet_dparser.mkl.
-You can run xxx 
+In order to align the reference and parsed output, we require the reference file is ordered by sentence length.
+We provide a script (```examples/bin/sort_data_by_length.py```) to sort CONLL-X data by length.
 
 ## Known issues:
 - The tialnn-0.0.1 library is still under development and some un-used

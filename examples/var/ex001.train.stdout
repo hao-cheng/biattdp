@@ -1,0 +1,175 @@
+num_threads: 2
+init_model_filename: 
+word_vocab_filename: data/full_wsj.word_vocab.txt
+lemma_vocab_filename: 
+cpos_vocab_filename: 
+pos_vocab_filename: data/full_wsj.postag_vocab.txt
+feature_vocab_filename: 
+dependency_vocab_filename: data/full_wsj.label_vocab.txt
+init_wordembd_filename: 
+train_filenames: data/sampled_wsj.train.conllx
+validation_filenames: data/sampled_wsj.dev.conllx
+shuffle_datafiles: 0
+shuffle_datapoints: 1
+init_learning_rate: 0.0004
+min_improvement: 1
+num_noneval_iterations: 0
+max_iterations: 0
+save_all_models: 1
+multitask_weight_arclabel: 1
+batch_size: 1
+max_sequence_length: 145
+solver: 3
+initializer: 0
+initializer_std: 0
+word_vocab_.size_: 23770
+word_vocab_.root_idx_: 2
+word_vocab_.unk_idx_: 1
+lemma_vocab_.size_: 0
+cpos_vocab_.size_: 0
+pos_vocab_.size_: 48
+feature_vocab_.size_: 0
+dependency_vocab_.size_: 46
+num_composition_neurons_: 16
+num_projection_neurons_: 16
+num_hidden_neurons_: 16
+writing var/ex001.INIT.model
+Checking training data...
+Checking validation data...
+******************************* ITERATION 0 *******************************
+learning_rate = 0.0004
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -49319.1
+writing var/ex001.ITER_0.model
+time elapsed 0.902 secs for this iteration out of 0.902 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -41828.7
+time elapsed 0.197 secs for this iteration out of 1.1 secs in total.
+******************************* ITERATION 1 *******************************
+learning_rate = 0.0004
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -38349
+writing var/ex001.ITER_1.model
+time elapsed 0.843 secs for this iteration out of 1.944 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -37336.5
+time elapsed 0.15 secs for this iteration out of 2.094 secs in total.
+******************************* ITERATION 2 *******************************
+learning_rate = 0.0004
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -31195.2
+writing var/ex001.ITER_2.model
+time elapsed 0.84 secs for this iteration out of 2.935 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -35015.6
+time elapsed 0.184 secs for this iteration out of 3.12 secs in total.
+******************************* ITERATION 3 *******************************
+learning_rate = 0.0004
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -27597.2
+writing var/ex001.ITER_3.model
+time elapsed 0.835 secs for this iteration out of 3.956 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -33266.6
+time elapsed 0.176 secs for this iteration out of 4.132 secs in total.
+******************************* ITERATION 4 *******************************
+learning_rate = 0.0004
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -25379.9
+writing var/ex001.ITER_4.model
+time elapsed 0.832 secs for this iteration out of 4.965 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -31756.2
+time elapsed 0.18 secs for this iteration out of 5.145 secs in total.
+******************************* ITERATION 5 *******************************
+learning_rate = 0.0004
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -23676.6
+writing var/ex001.ITER_5.model
+time elapsed 0.836 secs for this iteration out of 5.982 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -31767.5
+time elapsed 0.15 secs for this iteration out of 6.132 secs in total.
+validation log-likelihood decrease; resetting parameters
+******************************* ITERATION 6 *******************************
+learning_rate = 0.0002
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -23742.7
+writing var/ex001.ITER_6.model
+time elapsed 0.839 secs for this iteration out of 6.972 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -31215.4
+time elapsed 0.15 secs for this iteration out of 7.122 secs in total.
+******************************* ITERATION 7 *******************************
+learning_rate = 0.0001
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -22966.9
+writing var/ex001.ITER_7.model
+time elapsed 0.837 secs for this iteration out of 7.959 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -31157.7
+time elapsed 0.15 secs for this iteration out of 8.109 secs in total.
+******************************* ITERATION 8 *******************************
+learning_rate = 5e-05
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -22562.5
+writing var/ex001.ITER_8.model
+time elapsed 0.841 secs for this iteration out of 8.951 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -31048.2
+time elapsed 0.149 secs for this iteration out of 9.101 secs in total.
+******************************* ITERATION 9 *******************************
+learning_rate = 2.5e-05
+...
+epoch finished
+num of data samples: 1686
+log-likelihood (base e) of training is: -22392.1
+writing var/ex001.ITER_9.model
+time elapsed 0.843 secs for this iteration out of 9.945 secs in total.
+----------VALIDATION----------
+
+num of data samples: 485
+log-likelihood (base e) of validation: -31088.2
+time elapsed 0.184 secs for this iteration out of 10.129 secs in total.
+validation log-likelihood decrease; resetting parameters
+writing var/ex001.model
+================================================================================
+
+num of data samples: 485
+log-likelihood (base e) of validation is: -31048.2
