@@ -26,7 +26,7 @@ This repository includes the softwares and models for the paper
 	* We have put a few pre-compiled binaries under libs/.
 3. Intel MKL has been installed.
 
-#####To Compile the codes (Linux):
+##### To Compile the codes (Linux):
 0. Ensure Intel MKL has been installed, and ```$(MKLROOT)``` has be defined using ```compilervars.sh```.
 1. Edit make/memnet.mkl.mk
   * change (Line 9) ```CXX```
@@ -39,7 +39,7 @@ This repository includes the softwares and models for the paper
 	In this case, you need to change the make/memnet.mkl.mk.
 	An example Makefile for OpenBLAS is included: make/memnet.openblas.mk.
 
-#####To Compile the codes (Windows):
+##### To Compile the codes (Windows):
 1. Open the solution file msvc/MemNetDependencyParser.sln using Visual Studio;
 2. Confiuration Manager: make sure you active solution configuration is Release.
 3. Right click the project CMemNetTrainer and check the following three places:
@@ -62,7 +62,7 @@ Use -h to check the available options.
 #### Train
 To train the model, please refer to the example config file under examples/configs.
 
-bin/train_cmement_dparser.mkl -c configs/ex001.train.config --outbase var/ex001
+```bin/train_cmement_dparser.mkl -c configs/ex001.train.config --outbase var/ex001```
 
 You need to run the scripts under the folder ```examples```. 
 Otherwise, you need to edit the paths in the config file. 
@@ -70,15 +70,15 @@ Otherwise, you need to edit the paths in the config file.
 You can also provide command line parameters. Note that command line parameters
 overwrite config file parameters.
 
-We also provide the config file (ex002.train.config) we used to train the best PTB model we reported in the paper.
+We also provide the config file (```ex002.train.config```) we used to train the best PTB model we reported in the paper.
 Due to the license issue, please download the PTB data from LDC1999T42.
 
 #### Evaluate
-bin/run_cmemnet_dparser.mkl --mst --inmodel var/ex001.model --infile data/sampled_wsj.dev.conllx --outfile var/ex001.decode.raw
+```bin/run_cmemnet_dparser.mkl --mst --inmodel var/ex001.model --infile data/sampled_wsj.dev.conllx --outfile var/ex001.decode.raw```
 
-bin/format_decode_output.py data/sampled_wsj.dev.conllx var/ex001.decode.raw var/ex001.decode.conllx
+```bin/format_decode_output.py data/sampled_wsj.dev.conllx var/ex001.decode.raw var/ex001.decode.conllx```
 
-bin/eval.pl -g data/sampled_wsj.dev.conllx -s var/ex001.decode.conllx -q
+```bin/eval.pl -g data/sampled_wsj.dev.conllx -s var/ex001.decode.conllx -q```
 
 NOTE: In order to enable mini-batch training, we group sentences according to their length.
 Therefore, internally, the order of the training instances are not preserved.
